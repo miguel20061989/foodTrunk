@@ -1,2 +1,0 @@
-# foodTrunk
-proyectos personales 
