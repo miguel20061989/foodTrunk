@@ -1,0 +1,161 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="foodTrunk.css">
+    <script type="text/javascript" src="foodTrunk.js"></script>
+
+
+    </head>
+
+    <body>
+
+    <header>
+    <img src="foodTruck.jpg" style="display:inline-block">
+     <canvas id="canvas"  class="canvas" width="450" height="120"></canvas>
+
+    <ul>
+      <li><a href="foodTrunk.html">Order</a></li>
+      <li><a href="#news">Inventory</a></li>
+      <li><a href="#contact">Warehouse</a></li>
+      <li><a href="#about">Sales Report</a></li>
+    </ul>
+
+    </header>
+
+    <br>
+
+    <section>
+     <article>
+      <div id="formulario">
+        <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px; font-size:1.5em;"> Menu</span>
+        <br>
+        <br>
+         <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px;">Foods : 
+          <select id="meats" name="meats" onChange="changePrice()">
+            <option value="">Foods Menu</option>
+            <option value="50.00">Hamburguesa</option>
+            <option value="20.00">Hot-Dog</option>
+            <option value="16.00">Papas Francesa</option>
+            <option value="23.00">Crepas</option>
+            <option value="15.00">Burros</option>
+            <option value="32.00">Alitas - BBQ(C/10)</option>
+         </select>
+       </span>
+
+         <br>
+         <br>
+          <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px;">Drinks :   
+            <select id="drink" name="drink" onChange="changePrecio()">
+              <option value="">Drinks Menu</option>
+            <option value="10.00">Coca-cola</option>
+            <option value="10.00">Pepsi</option>
+            <option value="25.00">Corona</option>
+            <option value="30.00">victoria</option>
+            <option value="30.00">Indio</option>
+            <option value="25.00">Tecate</option>
+         </select></span>
+         <br>
+         <br>
+          <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:45px;">Price: <input id="price" name="price" value="$0" disabled style="width:50px;"/></span>
+
+           <br>
+         <br>
+          <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:40px;">Table :  
+            <select id="tableClient" name="tableClient">
+            <option value="">Table </option>
+            <option value="Mesa_1">Mesa 1</option>
+            <option value="Mesa_2">Mesa 2</option>
+            <option value="Mesa_3">Mesa 3</option>
+            <option value="Terraza_1">Terraza 1</option>
+            <option value="Terraza_2">Terraza 2</option>
+            <option value="VIP">VIP</option>
+         </select></span>
+
+       <br>
+       <br>
+          <span> <button id="sendKitchen"  name="sendKitchen" onclick="pedidoCocina()" style="margin-left:120px; margin-botton:10px;">send kitchen</button></span>
+         <br>
+         <br>
+         <br>
+      </div>
+
+       <div id="ticket">
+        <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px; font-size:1.5em;">Ticket</span>
+        <br/>
+        <br/>
+        <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px;"> N°Order: <label id="numOrder"></label> </span>
+        <br/>
+        <br/>
+        <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px;"> Table: <label id="table"></label> </span>
+        <br/>
+        <br/>
+        <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px;"> Service:
+          <br/>
+          <br/>
+        <label id="meats" style="margin-left:30px;"></label>
+         <br/>
+        <label id="drinks" style="margin-left:30px;"></label>
+      </span>
+        <br/>
+        <br/>
+        <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px;"> Tip:<label id="propina"></label> </span>
+
+        <br/>
+        <br/>
+        <span style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:30px;"> Total:<label id="total"></label> </span>
+         <br/>
+          <span id="buttonPrint" style="font-weight: bold; text-shadow : 2px 2px #DFD7D7; margin-left:150px;"></span>  
+        <br/>
+        <br/>
+      </div>
+      </article>
+    </section>
+    <br>
+    <br>
+    <section>
+    <div id="tableKitchen">
+
+      
+    <table>
+    <thead>
+    <th>N° Orden</th>
+    <th>Platillos</th>
+    <th>Bebida</th>
+    <th>Estado</th>
+    </thead>
+
+    <tbody id="kitchen">
+    </tbody>
+
+    </table>
+    </div>
+
+
+
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+        <br>
+    <br>
+    <br>
+    <br>
+    <footer id="fbar">
+      <span>
+       <a href="https://www.orbitmedia.com/privacy-policy" id="privacy">Privacy Policy</a>
+       </span>
+       <span class="delimiter delimiter-41">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+       <span class="menu-item-page-12 last">
+       <a href="https://www.orbitmedia.com/sitemap" id="site">Sitemap</a>
+        </span>
+        </div>
+        <div id="copyRight">© 2016 Miguel Angel Peña Perez</div>    
+      </div>
+    </footer>
+
+    </body>
+    </html>
