@@ -55,21 +55,21 @@
 
 
         var meats = document.getElementById("meats").value;  
-        var drink = document.getElementById("drink").value;
+        var drinks = document.getElementById("drink").value;
 
         if(meats === ""){
-        document.getElementById("price").value = "$"+drink;    
+        document.getElementById("price").value = "$"+drinks;    
         }
-        else if(drink === "")
+        else if(drinks === "")
         {
           document.getElementById("price").value = "$"+meats;
         }
-        else if(meats === "" && drink === "" ){
+        else if(meats === "" && drinks === "" ){
         document.getElementById("price").value = "$0";
         }
         else{
 
-        var resultado = (meats * 1) + (drink * 1);  
+        var resultado = (meats * 1) + (drinks * 1);  
          document.getElementById("price").value =  "$"+resultado;   
         }
 
@@ -102,30 +102,30 @@
             var cell3 = row.insertCell(2);
             var cell4 = row.insertCell(3);
             cell1.innerHTML = numeroOrden;
-            cell2.innerHTML = platillo;
-            cell3.innerHTML = bebida;
+            cell2.innerHTML = meats;
+            cell3.innerHTML = drink;
             cell4.innerHTML = '<input type="checkbox" '+ "onChange="+"factura("+"'"+priceMeats+"',"+"'"+meats+"',"+"'"+priceDrink+"',"+"'"+drink+"',"+"'"+numeroOrden+"',"+"'"+tableClient+"'"+")"+'>'+'</input>';
         }
 
-        function factura(priceMeats, meats, priceDrink, drink, numOrden, tableClient){
+        function factura(priceMeats, meatss, priceDrink, drink, numOrden, tableClient){
 
 
-        var total = (precioComidas * 1) + (precioBebidas * 1);
+        var total = (priceMeats * 1) + (priceDrink * 1);
         var tips = (total * 1) * 0.10;
         var totalService = (total * 1) + (tips * 1); 
 
 
         document.getElementById("numOrder").innerHTML = numOrden;
-        document.getElementById("propina").innerHTML = "$"+tips;
+        document.getElementById("tips").innerHTML = "$"+tips;
         document.getElementById("total").innerHTML = "$"+totalService;
         
-          document.getElementById("meats").innerHTML = comida;
-          document.getElementById("drinks").innerHTML = bebida;
+          document.getElementById("meatss").innerHTML = meatss;
+          document.getElementById("drinks").innerHTML = drink;
 
-          document.getElementById("table").innerHTML = mesa;
+          document.getElementById("table").innerHTML = tableClient;
 
 
-            document.getElementById("buttonPrint").innerHTML = '<button id="print" '+ "onclick="+"printTicket("+"'"+tips+"',"+"'"+comida+"',"+"'"+totalService+"',"+"'"+bebida+"',"+"'"+numOrden+"',"+"'"+mesa+"'"+")"+'> Print Ticket'+'</button>';
+            document.getElementById("buttonPrint").innerHTML = '<button id="print" '+ "onclick="+"printTicket("+"'"+tips+"',"+"'"+meatss+"',"+"'"+totalService+"',"+"'"+drink+"',"+"'"+numOrden+"',"+"'"+tableClient+"'"+")"+'> Print Ticket'+'</button>';
 
 
        document.getElementById(numOrden).remove();
